@@ -26,4 +26,10 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, meu');
   });
+
+  it('deve adicionar corretamente dois numeros', () => {
+    const componente = new AppComponent();
+    expect(componente.adicionar(2, 3)).toEqual(5)
+  })
+  
 });
